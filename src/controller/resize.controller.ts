@@ -5,6 +5,7 @@ import {
   UseInterceptors,
   Body,
   Res,
+  Get
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import * as sharp from 'sharp';
@@ -85,4 +86,10 @@ export class ImageController {
     console.log(link);
     response.json({ link });
   }
+
+  @Get('test')
+  sayHello(@Res() res){
+    res.json({Message:" Hello From Resizing-Api"})
+  }
+  
 }
