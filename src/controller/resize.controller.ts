@@ -55,6 +55,8 @@ export class ImageController {
     @Body() body,
     @Res() response,
   ) {
+    console.log("video", video);
+    
     const { width, height } = body;
     const inputPath = `public/${video.filename}`;
     console.log(inputPath);
